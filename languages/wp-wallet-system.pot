@@ -1,0 +1,1300 @@
+# Copyright (C) 2025 Sayan Dey
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WooCommerce Wallet System 3.6.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-wallet-system\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-03-02T06:06:57+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: wp-wallet-system\n"
+
+#. Plugin Name of the plugin
+#: wp-wallet-system.php
+msgid "WooCommerce Wallet System"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: wp-wallet-system.php
+msgid "https://sayandey.dev"
+msgstr ""
+
+#. Description of the plugin
+#: wp-wallet-system.php
+msgid "WooCommerce Wallet System Plugin helps in integrating wallet payment method."
+msgstr ""
+
+#. Author of the plugin
+#: wp-wallet-system.php
+msgid "Sayan Dey"
+msgstr ""
+
+#: class-wk-caching-core-loader.php:136
+msgid "WK Caching Core should be present in folder 'wk_caching\\includes' in order to run this properly."
+msgstr ""
+
+#: class-wk-caching-core-loader.php:151
+msgid "WK Caching Core should be at the same version as declared in your \"class-wk-caching-core-loader.php\""
+msgstr ""
+
+#: class-wk-wallet-core-loader.php:136
+msgid "WKWC Wallet should be present in folder 'wkwc_wallet\\includes' in order to run this properly."
+msgstr ""
+
+#: class-wk-wallet-core-loader.php:151
+msgid "WK Wallet Core should be at the same version as declared in your \"class-wk-wallet-core-loader.php\""
+msgstr ""
+
+#. Translators: %d: product filepath.
+#: inc/class-wkwp-wallet-autoload.php:72
+#: wkwc_wallet/inc/class-wkwc-wallet-autoload.php:86
+#: wk_caching/inc/class-wk-caching-autoload.php:67
+msgid "The file attempting to be loaded at %s does not exist."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:74
+msgid "Add Cashback Rule"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:74
+msgid "Update Cashback Rule"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:94
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:141
+msgid "Cashback For"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:99
+msgid "Recharge wallet"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:100
+msgid "Purchase Product"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:107
+msgid "Cashback Type"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:112
+#: includes/class-wkwp-wallet-functions.php:96
+#: includes/class-wkwp-wallet-functions.php:210
+msgid "Fixed"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:113
+msgid "Percent"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:115
+msgid "You can set cashback type either fixed or percentage based. Cashback will be calculated based on this selection."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:121
+#: includes/class-wkwp-wallet-functions.php:104
+#: includes/class-wkwp-wallet-functions.php:227
+msgid "Cashback Amount"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:132
+msgid "Cart Total From"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:143
+msgid "Cart Total To"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:154
+msgid "Yearly Purchase"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:164
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:142
+msgid "Status"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:169
+msgid "Publish"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:170
+msgid "Draft"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:183
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:121
+msgid "Cancel"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:314
+msgid "Something went wrong!"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:315
+msgid "Enter Valid Range for starting and end price."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:316
+msgid "Cashback cannot be greater than total cart amount."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:317
+msgid "Cashback cannot be greater than 100%."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:318
+msgid "Enter Valid Number for prices."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:319
+msgid "Some issue in adding a new rule."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:320
+msgid "This range of starting price is already covered in some other rule."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:321
+msgid "This range of end price is already covered in some other rule."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:322
+msgid "Some issue in updating the cashback rule."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:323
+msgid "A new cashback rule is added successfully."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:324
+msgid "The cashback rule is updated successfully."
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:35
+msgid "Rule"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:36
+msgid "Rules"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:135
+msgid "Id"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:136
+msgid "Price From"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:137
+msgid "Price To"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:138
+msgid "Yearly Based"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:139
+#: includes/class-wkwp-wallet-functions.php:92
+#: includes/class-wkwp-wallet-functions.php:208
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:98
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:100
+msgid "Type"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:140
+#: includes/class-wkwp-wallet-functions.php:102
+#: includes/class-wkwp-wallet-functions.php:225
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:177
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:76
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:85
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:99
+msgid "Amount"
+msgstr ""
+
+#: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:202
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:74
+msgid "Delete"
+msgstr ""
+
+#: includes/admin/class-wkwp-wallet-admin-functions.php:58
+#: includes/admin/class-wkwp-wallet-admin-functions.php:117
+#: includes/admin/class-wkwp-wallet-admin-functions.php:118
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-wkwp-wallet-admin-functions.php:59
+msgid "Gateway"
+msgstr ""
+
+#: includes/admin/class-wkwp-wallet-admin-functions.php:70
+#: includes/admin/class-wkwp-wallet-admin-functions.php:71
+#: includes/admin/class-wkwp-wallet-admin-functions.php:81
+#: includes/admin/class-wkwp-wallet-admin-functions.php:93
+#: includes/admin/class-wkwp-wallet-admin-functions.php:105
+#: includes/admin/class-wkwp-wallet-admin-functions.php:117
+msgid "Wallet System"
+msgstr ""
+
+#: includes/admin/class-wkwp-wallet-admin-functions.php:82
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer.php:47
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:31
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:32
+msgid "Customer Wallet"
+msgstr ""
+
+#: includes/admin/class-wkwp-wallet-admin-functions.php:93
+#: includes/admin/class-wkwp-wallet-admin-functions.php:94
+msgid "Transactions"
+msgstr ""
+
+#: includes/admin/class-wkwp-wallet-admin-functions.php:105
+#: includes/admin/class-wkwp-wallet-admin-functions.php:106
+#: includes/admin/class-wkwp-wallet-admin-functions.php:201
+msgid "Cashback Rules"
+msgstr ""
+
+#: includes/admin/class-wkwp-wallet-admin-functions.php:166
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:36
+msgid "Wallet Transaction List"
+msgstr ""
+
+#: includes/admin/class-wkwp-wallet-admin-functions.php:168
+msgid "Export Wallet Transaction Details"
+msgstr ""
+
+#: includes/admin/class-wkwp-wallet-admin-functions.php:195
+msgid "Rule(s) are deleted successfully."
+msgstr ""
+
+#: includes/admin/class-wkwp-wallet-admin-functions.php:202
+msgid "Add Rule"
+msgstr ""
+
+#: includes/admin/settings/wkwp-wallet-settings-content.php:12
+msgid "Cashback Settings"
+msgstr ""
+
+#: includes/admin/settings/wkwp-wallet-settings-content.php:16
+msgid "Multiple Cashback Conditions"
+msgstr ""
+
+#: includes/admin/settings/wkwp-wallet-settings-content.php:19
+msgid "If checked, multipce cashback conditions can be applied."
+msgstr ""
+
+#: includes/admin/settings/wkwp-wallet-settings-content.php:25
+msgid "Preference in Multiple Cashback"
+msgstr ""
+
+#: includes/admin/settings/wkwp-wallet-settings-content.php:28
+msgid "Select preference for multiple cashback conditions."
+msgstr ""
+
+#: includes/admin/settings/wkwp-wallet-settings-content.php:30
+msgid "Product"
+msgstr ""
+
+#: includes/admin/settings/wkwp-wallet-settings-content.php:31
+msgid "Cart"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:65
+msgid "Wallet Cashback"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:88
+#: includes/class-wkwp-wallet-functions.php:196
+msgid "Quantity"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:89
+msgid "Product Quantity"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:90
+#: includes/class-wkwp-wallet-functions.php:198
+msgid "Minimum Cart Quantity"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:97
+#: includes/class-wkwp-wallet-functions.php:211
+msgid "Percentage"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:100
+#: includes/class-wkwp-wallet-functions.php:214
+msgid "Cashback Based On Type"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:146
+msgid "Enter a valid numeric cashback amount greater than 0."
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:150
+msgid "Cashback cannot be greater than 100%"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:157
+msgid "Cashback Amount cannot be greater than product price."
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:187
+msgid "Wallet Cashback:"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:341
+msgid "Cart cashback received on purchase."
+msgstr ""
+
+#. translators: %s: Order number.
+#: includes/class-wkwp-wallet-functions.php:342
+#: includes/class-wkwp-wallet-functions.php:456
+msgid "Order no: %s"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:400
+msgid "Product cashback received on purchase."
+msgstr ""
+
+#. translators: %s: Order number, %s: Product title.
+#: includes/class-wkwp-wallet-functions.php:401
+msgid "Order no: %1$s, Product name: %2$s"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:455
+msgid "Recharge cashback received."
+msgstr ""
+
+#: includes/class-wkwp-wallet.php:111
+msgid "Cloning is forbidden."
+msgstr ""
+
+#: includes/class-wkwp-wallet.php:120
+msgid "Deserializing instances of this class is forbidden."
+msgstr ""
+
+#: includes/class-wkwp-wallet.php:131
+msgid "WKWP wallet system is enabled but not effective. It requires WooCommerce to work! Latest version is recommended"
+msgstr ""
+
+#. translators: %s current user id
+#: includes/class-wkwp-wallet.php:161
+#: wkwc_wallet/includes/class-wkwc-wallet.php:200
+#: wk_caching/includes/class-wk-caching.php:178
+msgid "User in action: %s: "
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-ajax-functions.php:52
+msgid "No customer found."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-ajax-functions.php:86
+msgid "No user found!"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-functions.php:53
+msgid "No matches found"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-functions.php:54
+msgid "Loading failed"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-functions.php:55
+msgid "Please enter 1 or more characters"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-functions.php:56
+msgid "Please enter %qty% or more characters"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-functions.php:57
+msgid "Please delete 1 character"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-functions.php:58
+msgid "Please delete %qty% characters"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-functions.php:59
+msgid "You can only select 1 item"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-functions.php:60
+msgid "You can only select %qty% items"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-functions.php:61
+msgid "Loading more results&hellip;"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-functions.php:62
+msgid "Searching&hellip;"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/class-wkwc-wallet-admin-functions.php:63
+msgid "Are you sure you wish to delete this note? This action cannot be undone."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:14
+msgid "Wallet Settings"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:15
+msgid "OTP Settings"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:23
+msgid "OTP Verification"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:26
+msgid "If checked, wallet checkout and wallet transfers requries OTP."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:33
+msgid "OTP Access Method"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:36
+msgid "Select OTP verification method."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:38
+msgid "SMS"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:39
+msgid "Mail"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:41
+msgid "If SMS is enabled, Twillio account and credentials will be requried."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:47
+msgid "OTP Validation Limit in minute(s)"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:56
+msgid "Account SID"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:65
+msgid "Twilio Number"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:75
+msgid "Auth Token"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:85
+msgid "Save Changes"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/settings/wkmc-wallet-settings-content.php:88
+msgid "Show Caching Settings"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:37
+msgid "Wallet Transactions List"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:138
+msgid "No Transactions to export."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:174
+msgid "Transaction ID"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:175
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:98
+msgid "Reference"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:176
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:71
+msgid "Customer"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:178
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:234
+msgid "Transaction Type"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:179
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:101
+msgid "Date"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:235
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:100
+msgid "Credit"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:236
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:101
+msgid "Debit"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:237
+msgid "Refund"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:238
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:206
+msgid "Transfer"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:268
+msgid "From:"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:269
+msgid "To:"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:270
+msgid "Filter"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:68
+msgid "Wallet Transaction Details"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:89
+msgid "Order ID"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:94
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:95
+msgid "Action"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:107
+msgid "Receiver"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:117
+msgid "Payer"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:122
+msgid "Transaction On"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:127
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:108
+msgid "Transaction Note"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:135
+msgid "Not a valid transaction."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:170
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:22
+msgid "Wallet Amount"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:181
+msgid "Receiver&#8217;s Email : "
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:184
+msgid "e.g. example@xyz.com"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:189
+msgid "Amount To Transfer: "
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:197
+#: wkwc_wallet/woocommerce/emails/wkwc-wallet-transaction-mail.php:21
+msgid "Transaction Note: "
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:207
+msgid "Verify & Transfer"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:208
+msgid "Resend"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:237
+msgid "OTP could not be sent"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:241
+msgid "Customer Email is required."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:246
+msgid "Please enter a numeric amount greater than 0."
+msgstr ""
+
+#. translators: %1$s: Max transfer value.
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:254
+msgid "You can not transfer more than %s"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:261
+msgid "Receiver does not exist."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:269
+msgid "Cannot Transfer money to yourself."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:277
+msgid "You have insufficient wallet balance."
+msgstr ""
+
+#. translators: %1$s: Blog info, %2$s: Transfer amount, %3$s: Receiver name.
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:291
+msgid "You have initiated a transfer of amount: %1$s to %2$s on the site [%3$s]"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:317
+msgid "Unable to sent the OTP."
+msgstr ""
+
+#. translators: %s: OTP
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:321
+msgid " Your six digit OTP for this wallet transaction is: %s"
+msgstr ""
+
+#. translators: %s: OTP
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:336
+msgid "Your six digit OTP for wallet transaction has been successfully sent to the email: %s"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:346
+msgid "You must update your phone number along with country from my-account/wallet section."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:62
+msgid "Wallet Manual Transaction"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:67
+msgid "Customer Name"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:112
+msgid "note"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:120
+msgid "Update Wallet"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:145
+msgid "Some fields are empty."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:162
+msgid "Manual Wallet Credit"
+msgstr ""
+
+#. translators: %s: Maximum amount.
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:165
+msgid "You Could not store more than %s"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:169
+msgid "Manual Wallet Debit"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:172
+msgid "Insufficient Amount."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer.php:48
+msgid "Manual Transaction"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer.php:49
+msgid "Export Wallet"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer.php:71
+msgid "Amount is debited successfully."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer.php:74
+msgid "Amount is credited successfully."
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-product.php:51
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-filter-functions.php:58
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:32
+msgid "Wallet"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:83
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:97
+msgid "ID"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:84
+msgid "Username"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:85
+msgid "Email"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:86
+msgid "Location"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:87
+msgid "Orders"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:88
+msgid "Wallet Money"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:89
+msgid "Last Order"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:90
+msgid "Actions"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:127
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:238
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:37
+msgid "Edit"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:133
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:244
+msgid "View orders"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:148
+msgid "Link prev orders"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:264
+msgid "Link previous orders"
+msgstr ""
+
+#: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-table.php:290
+msgctxt "hash before order number"
+msgid "#"
+msgstr ""
+
+#: wkwc_wallet/includes/class-wkwc-wallet-sms-handler.php:60
+msgid "There are some issue in sending SMS, contact the administrator."
+msgstr ""
+
+#. translators: %s: OTP
+#: wkwc_wallet/includes/class-wkwc-wallet-sms-handler.php:97
+msgid "Your six digit OTP for wallet transaction has been successfully sent to the phone: %s"
+msgstr ""
+
+#: wkwc_wallet/includes/class-wkwc-wallet-sms-handler.php:105
+msgid "SMS Service issue, Try again later."
+msgstr ""
+
+#: wkwc_wallet/includes/class-wkwc-wallet.php:102
+msgid "Please run the command \"composer install\" at following path to install Twilio library library for SMS feature."
+msgstr ""
+
+#: wkwc_wallet/includes/class-wkwc-wallet.php:218
+msgid "Anonymous User"
+msgstr ""
+
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:67
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:314
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:276
+msgid "Order No."
+msgstr ""
+
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:68
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:321
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:336
+msgid "Wallet Transaction"
+msgstr ""
+
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:72
+msgid "Wallet Credit"
+msgstr ""
+
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:104
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:87
+msgid "Pay via Wallet"
+msgstr ""
+
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:105
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:94
+msgid "Pay with amount in your wallet."
+msgstr ""
+
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:150
+msgid "Enter the OTP."
+msgstr ""
+
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:153
+msgid "Verify"
+msgstr ""
+
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:155
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:86
+msgid "Invalid OTP"
+msgstr ""
+
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:186
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:332
+msgid "Payment via Wallet"
+msgstr ""
+
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:323
+msgid "Wallet full checkout"
+msgstr ""
+
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:338
+msgid "Wallet partial checkout"
+msgstr ""
+
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:21
+msgid "Send Wallet Transaction Notifications"
+msgstr ""
+
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:22
+msgid "A notification will be sent to the customer when any transaction from the wallet happened."
+msgstr ""
+
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:87
+msgid "A New Wallet Transaction"
+msgstr ""
+
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:96
+msgid "A new transaction on your Wallet {site_title}"
+msgstr ""
+
+#. translators: %s: Cashback amount.
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:118
+msgid "Your have received a %s cashback  in your wallet for recharging it."
+msgstr ""
+
+#. translators: %1$s: Wallet amount, %$2s: Order id.
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:122
+msgid "You have used %1$s from your wallet to place the order %2$s."
+msgstr ""
+
+#. translators: %1$s: Cashback amount, %$2s: Order id.
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:126
+msgid "You have received  a cashback %1$s for placing the order %2$s."
+msgstr ""
+
+#. translators: %1$s: Refunded wallet amount, %$2s: Order id.
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:130
+msgid "Your wallet has been credited by %1$s on refunded the order %2$s"
+msgstr ""
+
+#. translators: %1$s: Transfer amount, %$2s: Sender Name.
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:135
+msgid "Your wallet has been credited by %1$s, sent by: %2$s"
+msgstr ""
+
+#. translators: %1$s: Transfer amount, %$2s: Receiver Name.
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:140
+msgid "Your have transfered %1$s from your wallet to %2$s"
+msgstr ""
+
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:144
+msgid "credited to"
+msgstr ""
+
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:144
+msgid "debited from"
+msgstr ""
+
+#. translators: %1$s: Manual amount, %$2s: Action.
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:145
+msgid "%1$s has been %2$s to your wallet by admin"
+msgstr ""
+
+#. translators: %1$s: Recharge amount.
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transaction-mail.php:149
+msgid "Your wallet has been recharged by %s"
+msgstr ""
+
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transfer-send-otp.php:21
+msgid "Send Wallet Transaction OTP"
+msgstr ""
+
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transfer-send-otp.php:22
+msgid "OTP will be sent when transferring wallet amount."
+msgstr ""
+
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transfer-send-otp.php:78
+msgid "Wallet Transaction OTP"
+msgstr ""
+
+#: wkwc_wallet/includes/emails/class-wc-email-wkwc-wallet-transfer-send-otp.php:87
+msgid "6 digit wallet transaction OTP {site_title}"
+msgstr ""
+
+#: wkwc_wallet/includes/emails/trait-wc-email-wkwc-wallet-trait.php:65
+msgid "Thank you for choosing {site_title}!"
+msgstr ""
+
+#: wkwc_wallet/includes/emails/trait-wc-email-wkwc-wallet-trait.php:76
+msgid "Someone"
+msgstr ""
+
+#. translators: %s: Customer name.
+#: wkwc_wallet/includes/emails/trait-wc-email-wkwc-wallet-trait.php:78
+msgid "Hi %s,"
+msgstr ""
+
+#. translators: %s: Customer name.
+#: wkwc_wallet/includes/emails/trait-wc-email-wkwc-wallet-trait.php:79
+msgid "Message from Admin"
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:89
+msgid "OTP Expired."
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:97
+msgid "Amount has been successfully transfered."
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:104
+msgid "OTP has been successfully verified."
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:134
+msgid "Unable to delete."
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:147
+msgid "Selected transaction has been deleted successfully."
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:175
+msgid "Wallet transfer"
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:207
+msgid "Verification successful."
+msgstr ""
+
+#. translators: %s: Blog title.
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:220
+msgid "You are going to make a payment for some purchase using your wallet on the site [%s]."
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:249
+msgid "Wallet credit removed."
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:272
+msgid "Invalid phone number."
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:276
+msgid "Phone number has been successfully updated."
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-filter-functions.php:87
+msgid "My Wallet"
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-functions.php:110
+msgid "Sorry, your nonce did not verify."
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-functions.php:166
+msgid "Enter a valid numeric amount to recharge your wallet."
+msgstr ""
+
+#. translators: %s: Minimum Credit amount.
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-functions.php:171
+msgid "Minimum Wallet Credit Amount must be: %s"
+msgstr ""
+
+#. translators: %s: Minimum Credit amount.
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-functions.php:176
+msgid "Maximum Wallet Credit Amount limit is: %s"
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-functions.php:191
+msgid "Wallet product is not valid."
+msgstr ""
+
+#. translators: %s: Minimum Credit amount.
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-functions.php:203
+msgid "Maximum Wallet Amount could not be more than %s"
+msgstr ""
+
+#. translators: %s: Wallet product title.
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-functions.php:210
+msgid "%s has been added to your cart."
+msgstr ""
+
+#. translators: %s: Cart URL, %s: Cart button, %s: Added text.
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-functions.php:211
+msgid "View cart"
+msgstr ""
+
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-functions.php:270
+msgid "Cannot add new product now. Either empty cart or process it first."
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:33
+msgid "Have your customers pay with wallet."
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:76
+msgid "Enable Wallet"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:77
+msgid "Enable Wallet Payment"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:79
+msgid "Enable wallet payment gateway."
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:84
+msgid "Title"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:86
+msgid "Payment method title that the customer will see during checkout."
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:91
+msgid "Description"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:93
+msgid "Payment method description that the customer will see during checkout."
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:98
+msgid "Instructions"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:100
+msgid "Instructions that will be added to the thank you page."
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:101
+msgid "Payment was done by amount in your wallet."
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:105
+msgid "Accept for virtual orders"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:106
+msgid "Accept Wallet if the order is virtual"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:110
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:111
+msgid "Maximum amount the customer can keep in the Wallet"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:120
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:121
+msgid "Minimum Wallet Credit Amount"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:130
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:131
+msgid "Maximum Wallet Credit Amount"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:140
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:141
+msgid "Maximum Amount Transfer From Wallet"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:150
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:151
+msgid "Maximum Wallet Debit Type"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:153
+msgid "Select maximum wallet debit type for wallet checkout."
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:159
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:160
+msgid "Maximum Wallet Debit Amount"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:162
+msgid "Maximum amount can be used from wallet on checkout."
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:171
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:172
+msgid "Apply Discount"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:174
+msgid "Discount can apply on using wallet payment"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:277
+msgid "Wallet Credited"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:283
+msgid "Wallet Order Refund"
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:315
+msgid "Payment to be made upon delivery."
+msgstr ""
+
+#. translators: %s wallet gateway settings links
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:368
+msgid "Wallet Gateway settings are not configured. %s"
+msgstr ""
+
+#. translators: %s wallet gateway settings links
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:368
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:379
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:390
+msgid "Configure Wallet Gateway"
+msgstr ""
+
+#. translators: %s wallet gateway settings links
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:379
+msgid "Minimum wallet credit is not configured correctly, customers will not be able to add money to their wallets. %s"
+msgstr ""
+
+#. translators: %s wallet gateway settings links
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:390
+msgid "Maximum wallet debit amount is not configured correctly, customers will not be able to make payments through their wallets. %s"
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:24
+msgid "Wallet Transfer "
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:31
+msgid "Twilio SMS Number (with country code)"
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:41
+msgid "Enter your mobile number..."
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:42
+msgid "Update"
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:60
+msgid "Add to Wallet"
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:67
+msgid "Wallet Transactions"
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:73
+msgid "Bulk Actions"
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:76
+msgid "Apply"
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:83
+msgid "%s Transactions"
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:108
+msgid "Transfer to "
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:109
+msgid "Received from "
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:135
+msgid "Wallet Transfer"
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:154
+msgid "Go shop"
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:156
+msgid "No order has been made yet."
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:166
+msgid "Previous"
+msgstr ""
+
+#: wkwc_wallet/templates/wkwc-wallet-front-listing.php:170
+msgid "Next"
+msgstr ""
+
+#: wkwc_wallet/woocommerce/emails/wkwc-wallet-transaction-mail.php:19
+msgid "Your Current wallet amount: "
+msgstr ""
+
+#: wkwc_wallet/woocommerce/emails/wkwc-wallet-transaction-mail.php:20
+msgid "Reference: "
+msgstr ""
+
+#: wk_caching/includes/class-wk-caching.php:43
+msgid "Plugin Core Caching"
+msgstr ""
+
+#: wk_caching/includes/class-wk-caching.php:48
+msgid "Enable"
+msgstr ""
+
+#: wk_caching/includes/class-wk-caching.php:53
+msgid "Save"
+msgstr ""
+
+#: wk_caching/includes/class-wk-caching.php:73
+msgid "Clear all"
+msgstr ""
+
+#. Translators: %s: Saved cache keys count.
+#: wk_caching/includes/class-wk-caching.php:74
+msgid " Saved keys count: %s"
+msgstr ""
+
+#. Translators: %s: Saved cache keys count.
+#: wk_caching/includes/class-wk-caching.php:75
+msgid "Show Keys"
+msgstr ""
+
+#: wk_caching/includes/class-wk-caching.php:76
+msgid "Show Data"
+msgstr ""
+
+#: wk_caching/includes/class-wk-caching.php:144
+msgid "Please run the command \"composer install\" at following path to install PHP Fast Cache library."
+msgstr ""

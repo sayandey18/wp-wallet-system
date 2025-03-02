@@ -1,0 +1,40 @@
+/**
+* Admin facing CSS file.
+*/
+.wkwp-wallet-edit-cashback .error {
+	color: red;
+}
+/* Product Variation Wallet Cashback*/
+.wkwc-wallet-front-container .wc-wallet-product-variation-metabox-wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+
+.wkwc-wallet-front-container select#product-meta-cashback-type {
+	max-width: 130px;
+	width: 100%;
+}
+
+.wkwc-wallet-front-container .wc-wallet-product-variation-metabox-wrapper .form-field {
+	margin: 10px 5px;
+}
+/** Alert Message */
+
+.wkwc-wallet-front-container .alert-success {
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+}
+.wkwc-wallet-front-container .alert {
+	position: relative;
+	padding: 0.75rem 1.25rem;
+	margin: 1rem;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+}
+
+/* Tooltip Sentences */
+.wkwc-wallet-front-container .tooltip-desc {
+	display: inline-block;
+	color: #777;
+}

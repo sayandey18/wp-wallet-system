@@ -1,0 +1,341 @@
+/**
+* Front style css
+*/
+.wkwc-wallet-hide {
+	display: none;
+}
+.wkwc-wallet-front-container .add-wallet-wrapper,
+.wkwc-wallet-front-container .wallet-transactions-wrapper {
+	border-radius: 4px;
+}
+.wkwc-wallet-front-container .wallet-transactions-wrapper {
+	margin-top: 30px;
+}
+
+.wkwc-wallet-front-container .error {
+	color: brown;
+}
+
+.wkwc-wallet-front-container .add-wallet-wrapper h4,
+.wkwc-wallet-front-container .wallet-transactions-wrapper h4 {
+	color: #444;
+	margin: 0;
+	margin-left: 10px;
+	text-align: left;
+	font-size: 16px;
+}
+.wkwc-wallet-front-container .wallet-transactions-wrapper h4 {
+	padding: 7px;
+	background-color: #f2f2f2;
+	margin: 0;
+	text-align: center;
+	font-size: 21px;
+}
+.wkwc-wallet-front-container .add-wallet-wrapper form {
+	display: inline-block;
+}
+.wkwc-wallet-front-container .add-wallet-wrapper form label {
+	border: solid 1px #bbb;
+	margin-left: -4px;
+	padding: 7px 14px 9px;
+	vertical-align: middle;
+}
+.wkwc-wallet-front-container .add-wallet-wrapper form .product {
+	border: 0px !important;
+}
+.wkwc-wallet-front-container .add-wallet-wrapper form .product span {
+	display: none;
+}
+.wkwc-wallet-front-container .wallet-pagination {
+	margin-top: 10px;
+}
+.wkwc-wallet-front-container .wallet-button {
+	background-color: #96588a !important;
+	color: #fff !important;
+	padding: 8px 10px !important;
+	box-sizing: border-box;
+	width: auto;
+	border-radius: 5px;
+	margin-top: 5px;
+}
+.wkwc-wallet-front-container .wallet-button:hover {
+	background-color: #732673 !important;
+	color: #fff !important;
+}
+.wkwc-wallet-front-container .amount-heading {
+	float: left;
+	margin-left: 3px;
+}
+.wkwc-wallet-front-container .amount-container {
+	background-color: #f8f8f8 !important;
+	padding: 6px;
+	clear: both;
+	border: solid 1px #ccc;
+	border-radius: 3px;
+	display: -webkit-inline-box;
+	width: 100%;
+}
+.wkwc-wallet-front-container .process-money {
+	float: right;
+	margin: 0;
+	margin-right: 3px;
+	padding: 0;
+	vertical-align: middle;
+	margin-top: 17px;
+	text-align: right;
+}
+.wkwc-wallet-front-container #wkwc_wallet_pay_amount,
+.wkwc-wallet-front-container #wkwc_wallet_receiver,
+.wkwc-wallet-front-container #wkwc_wallet_pay_note {
+	padding: 6px 5px 7px;
+	width: 80%;
+}
+.wkwc-wallet-front-container .process-money .add_wallet_money,
+.wkwc-wallet-front-container .process-money .request_wallet_money {
+	background-color: #fff;
+	border: solid 1px #ccc;
+	border-right: none;
+	padding: 6px 8px 4px;
+	width: 30%;
+	vertical-align: middle;
+}
+.wkwc-wallet-front-container .process-money .add_wallet_money:focus,
+.wkwc-wallet-front-container .process-money .request_wallet_money:focus {
+	background-color: #f8f8f8;
+}
+.wkwc-wallet-front-container .wallet-money-style {
+	color: #96588a;
+	font-weight: 500;
+	font-weight: bold;
+	font-size: 28px;
+	float: left;
+}
+.wkwc-wallet-front-container .wallet-money-style-small {
+	color: #96588a;
+	font-weight: 500;
+	font-weight: bold;
+	font-size: 16px;
+}
+.wkwc-wallet-front-container .curreny_symbol {
+	color: #96588a;
+	font-weight: 500;
+	font-weight: bold;
+	font-size: 28px;
+	float: right;
+	border-radius: 100%;
+	border: solid 1px #777;
+	padding: 4px 20px;
+	margin: 8px 8px 0 0;
+}
+.wkwc-wallet-front-container .amount-container .amount-heading h4 {
+	color: #444;
+	font-size: 17px;
+	margin: 0;
+	padding: 0;
+	font-weight: 500;
+	width: 50%;
+}
+.wkwc-wallet-front-container .wallet-money-form {
+	display: inline-block;
+	margin: 0;
+	width: 100%;
+}
+.wkwc-wallet-front-container .wallet-transfer {
+	color: #96588a;
+	font-size: 15px;
+	font-weight: 500;
+	position: relative;
+    left: 2%;
+    top: -4px;
+}
+.wkwc-wallet-front-container .wallet-transfer:hover {
+	color: #732673;
+}
+.wkwc-wallet-front-container .wallet-transfer-container {
+	padding: 35px 70px;
+}
+.wkwc-wallet-front-container .wallet-transfer-container table td {
+	vertical-align: middle;
+}
+
+.wkwc-wallet-front-container .otp-settings input[type='text'] {
+	padding: 5px;
+}
+
+.wkwc-wallet-front-container .wallet-setting .notice {
+	padding: 12px;
+}
+
+.wkwc-wallet-front-container select#wallet-customer {
+	min-width: 230px;
+	width: 100%;
+}
+.wkwc-wallet-front-container input.select2-search__field {
+	min-width: 230px;
+	width: 100%;
+}
+.wkwc-wallet-front-container select#wallet-action {
+	width: 100%;
+	max-width: 230px;
+}
+.wkwc-wallet-front-container tbody#the-list td.user_actions.column-user_actions p a {
+	display: block;
+	text-align: center;
+	margin: 5px 8px 5px 0px;
+}
+
+.wkwc-wallet-front-container ul#select2-wallet-customer-results {
+	text-align: center;
+	border-radius: 0px 0px 4px 4px;
+	list-style: none;
+	box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+}
+
+.wkwc-wallet-front-container ul#select2-wallet-customer-results li {
+	background: #fff;
+	padding: 5px;
+	margin: 0px;
+	border-top: 1px solid #ddd;
+	cursor: pointer;
+}
+
+.wkwc-wallet-front-container .action-wrapper {
+	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 20px 0;
+}
+
+.wkwc-wallet-front-container .action-wrapper select {
+	min-width: 130px;
+	border: 1px solid #ddd;
+	cursor: pointer;
+	padding: 3px 3px;
+}
+
+.wkwc-wallet-front-container .action-wrapper select:focus-visible {
+	outline: none;
+}
+
+.wkwc-wallet-front-container .action-wrapper .form-row {
+	display: inline-flex;
+}
+
+.wkwc-wallet-front-container input#action_apply {
+	margin-left: 6px;
+}
+
+/** Alert Message */
+
+.wkwc-wallet-front-container .alert-success {
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+}
+.wkwc-wallet-front-container .alert {
+	position: relative;
+	padding: 0.75rem 1.25rem;
+	margin: 1rem;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+}
+
+/* Tooltip Sentences */
+.wkwc-wallet-front-container .tooltip-desc {
+	display: inline-block;
+	color: #777;
+}
+
+/* Product Variation Wallet Cashback*/
+.wkwc-wallet-front-container .wc-wallet-product-variation-metabox-wrapper {
+	display: flex;
+	justify-content: space-around;
+}
+
+.wkwc-wallet-front-container select#product-meta-cashback-type {
+	max-width: 130px;
+	width: 100%;
+}
+
+.wkwc-wallet-front-container .wc-wallet-product-variation-metabox-wrapper .form-field {
+	margin: 10px 5px;
+}
+
+.wkwc_wallet_spinner {
+	background: url(../assets/images/spinner.gif) no-repeat;
+	background-size: 20px 20px;
+	display: inline-block;
+	visibility: hidden;
+	float: left;
+	vertical-align: middle;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	width: 20px;
+	height: 20px;
+	margin: 4px 10px 0;
+}
+
+.wkwc_wallet_spinner.is-active,
+.loading-content .spinner {
+	visibility: visible;
+}
+.wkwc_wallet-spin-loader{
+	display: initial;
+}
+.wkwc_wallet_otp_success_notice.success, .wkwc_wallet-otp-msg-wrap .wkwc_wallet-otp-msg.wkwc_wallet-success {
+	color: #155724;
+}
+.wkwc_wallet_otp_success_notice.error, .wkwc_wallet-otp-msg-wrap .wkwc_wallet-otp-msg.wkwc_wallet-error {
+	color: red;
+}
+.wkwc_wallet-otp-wrap #wkwc_wallet_checkout_otp_field {
+    width: 48%;
+    margin: 2px 5px 10px 0;
+}
+.wkwc_wallet-otp-wrap .wkwc_wallet-verify-otp-button{
+    width: 48%;
+	background: #ccc;
+}
+.woocommerce-checkout-payment .wkwc_wallet-otp-wrap {
+    display: -webkit-inline-box;
+    width: 100%;
+}
+.wkwc-wallet-front-container .wkwc_wallet_col_2{
+	width: 48%;
+}
+.wkwc-wallet-front-container .amount-heading.wkwc_wallet_col_3{
+	width: 30%;
+}
+.wkwc-wallet-front-container .process-money.wkwc_wallet_col_3{
+	width: 32%;
+}
+.wkwc-wallet-front-container .wkwc_wallet_col_3{
+	width: 38%;
+}
+.wkwc-wallet-front-container .sms-number-wrap {
+    display: inline-flex;
+}
+
+.wkwc-wallet-front-container .wkwc-wallet-twilio-action {
+    position: relative;
+    top: 9px;
+    font-size: 25px;
+    color: #96588a;
+    cursor: pointer;
+}
+.wkwc-wallet-front-container .wkwc-wallet-twilio-action.updating{
+	animation: rotation 2s infinite ;
+}
+@keyframes rotation {
+  100% {transform: rotate(360deg);}
+}
+.wkwc-wallet-bulk-wrap .wp-spin.wkwc_wallet-spin-loader {
+    height: 20px;
+    position: relative;
+    top: 10px;
+}
+.wkwc-wallet-total-transaction-count {
+    position: relative;
+    left: 45%;
+}

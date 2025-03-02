@@ -1,0 +1,21 @@
+/**
+* Admin style css
+*/
+.wkwc_wallet_wrap .wkwc_wallet_settings_links {
+	font-size: 15px;
+	padding: 10px;
+}
+
+.wallet-transaction-view-wrapper {
+	background: #fff;
+	font-size: 14px;
+	padding: 10px;
+	text-align: left;
+}
+.wallet-transaction-view-wrapper table {
+	width: 100%;
+}
+.wallet-transaction-view-wrapper table th,
+.wallet-transaction-view-wrapper table td {
+	padding: 10px;
+}
