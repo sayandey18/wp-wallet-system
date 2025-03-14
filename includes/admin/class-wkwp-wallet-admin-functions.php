@@ -242,7 +242,6 @@ if ( ! class_exists( 'WKWP_Wallet_Admin_Functions' ) ) {
 						'rule_id'         => $post_data['rule_id'],
 						'rule_price_from' => $post_data['rule_price_from'],
 						'rule_price_to'   => $post_data['rule_price_to'],
-						'rule_annually'   => $post_data['rule_annually'],
 						'amount'          => $post_data['amount'],
 						'cashback_for'    => $post_data['cashback_for'],
 						'rule_status'     => $post_data['rule_status'],

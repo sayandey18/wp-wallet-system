@@ -61,7 +61,7 @@ if ( ! class_exists( 'WKWC_Wallet_Transactions_Helper' ) ) {
 				'customer'           => 0,
 				'amount'             => 0,
 				'transaction_type'   => '',
-				'transaction_date'   => gmdate( 'Y-m-d H:i:s' ),
+				'transaction_date'   => current_time( 'mysql' ),
 				'transaction_status' => '',
 				'transaction_note'   => '',
 			);
@@ -73,7 +73,6 @@ if ( ! class_exists( 'WKWC_Wallet_Transactions_Helper' ) ) {
 
 			if ( class_exists( 'WK_Caching_Core' ) ) {
 				$reset = $this->maybe_reset_cache( $data );
-
 				WKWC_Wallet::log( 'create_transaction cache reset has been done for these keys: ' . print_r( $reset, true ) );
 			}
 

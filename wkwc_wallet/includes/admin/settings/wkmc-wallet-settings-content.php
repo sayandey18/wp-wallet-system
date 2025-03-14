@@ -20,7 +20,7 @@ settings_fields( 'wkwc-wallet-settings-group' );
 		<tbody>
 		<tr>
 			<th scope="row" class="titledesc">
-				<label for="opt-verification"><?php esc_html_e( 'OTP Verification', 'wp-wallet-system' ); ?></label>
+				<label for="_wkwc_wallet_otp_enabled"><?php esc_html_e( 'OTP Verification', 'wp-wallet-system' ); ?></label>
 			</th>
 			<td class="forminp forminp-text">
 				<?php echo wc_help_tip( esc_html__( 'If checked, wallet checkout and wallet transfers requries OTP.', 'wp-wallet-system' ), true ); ?>
@@ -30,7 +30,7 @@ settings_fields( 'wkwc-wallet-settings-group' );
 
 		<tr>
 			<th scope="row">
-				<label for="otp-method"><?php esc_html_e( 'OTP Access Method', 'wp-wallet-system' ); ?></label>
+				<label for="wkwc_wallet_otp_method"><?php esc_html_e( 'OTP Access Method', 'wp-wallet-system' ); ?></label>
 			</th>
 			<td>
 				<?php echo wc_help_tip( esc_html__( 'Select OTP verification method.', 'wp-wallet-system' ), true ); ?>

@@ -354,11 +354,11 @@ if ( ! class_exists( 'WKWC_Wallet_Functions' ) ) {
 		 * 
 		 * @hooked 'woocommerce_cart_updated' Action hook.
 		 */
-		public function wkwc_wallet_update_on_cart_change() {
-			if ( ! empty( WC()->session->get( 'wkwc_wallet_allowed_wallet_amount' ) ) ) {
-				WC()->session->__unset( 'wkwc_wallet_allowed_wallet_amount' );
-				WC()->session->__unset( 'wkwc_wallet_cart_price' );
-			}
-		}
+		// public function wkwc_wallet_update_on_cart_change() {
+		// 	if ( ! empty( WC()->session->get( 'wkwc_wallet_allowed_wallet_amount' ) ) ) {
+		// 		WC()->session->__unset( 'wkwc_wallet_allowed_wallet_amount' );
+		// 		WC()->session->__unset( 'wkwc_wallet_cart_price' );
+		// 	}
+		// }
 	}
 }

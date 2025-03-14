@@ -13,16 +13,25 @@ defined( 'ABSPATH' ) || exit; // Exit if access directly.
 </tr>
 <tr>
 	<th scope="row" class="titledesc">
-		<label for="multiplce conditions"><?php esc_html_e( 'Multiple Cashback Conditions', 'wp-wallet-system' ); ?></label>
+		<label for="_wkwp_wallet_multi_cb"><?php esc_html_e( 'Multiple Cashback Conditions', 'wp-wallet-system' ); ?></label>
 	</th>
 	<td class="forminp forminp-text">
 		<?php echo wc_help_tip( esc_html__( 'If checked, multipce cashback conditions can be applied.', 'wp-wallet-system' ), true ); ?>
-		<input type="checkbox" id="_wkwp_wallet_multi_cb" name="_wkwp_wallet_multi_cb" value="1" <?php checked( get_option( '_wkwp_wallet_multi_cb', 1 ), 1 ); ?> />
+		<input type="checkbox" id="_wkwp_wallet_multi_cb" name="_wkwp_wallet_multi_cb" value="1" <?php checked( get_option( '_wkwp_wallet_multi_cb', true ), 1 ); ?> />
+	</td>
+</tr>
+<tr>
+	<th scope="row" class="titledesc">
+		<label for="_wkwp_wallet_annual_purchased_cb"><?php esc_html_e( 'Annual Purchase Based Cashback Conditions', 'wp-wallet-system' ); ?></label>
+	</th>
+	<td class="forminp forminp-text">
+		<?php echo wc_help_tip( esc_html__( 'If checked, annual purchase based cashback conditions can be applied.', 'wp-wallet-system' ), true ); ?>
+		<input type="checkbox" id="_wkwp_wallet_annual_purchased_cb" name="_wkwp_wallet_annual_purchased_cb" value="1" <?php checked( get_option( '_wkwp_wallet_annual_purchased_cb', true ), 1 ); ?> />
 	</td>
 </tr>
 <tr>
 	<th scope="row">
-		<label for="otp-method"><?php esc_html_e( 'Preference in Multiple Cashback', 'wp-wallet-system' ); ?></label>
+		<label for="_wkwp_wallet_preferred_cb"><?php esc_html_e( 'Preference in Multiple Cashback', 'wp-wallet-system' ); ?></label>
 	</th>
 	<td>
 		<?php echo wc_help_tip( esc_html__( 'Select preference for multiple cashback conditions.', 'wp-wallet-system' ), true ); ?>

@@ -65,7 +65,7 @@ if ( ! class_exists( 'WKWC_Wallet_Customer' ) ) {
 					}
 				}
 
-				$transaction = filter_input( INPUT_GET, 'transaction', FILTER_SANITIZE_STRING );
+				$transaction = filter_input( INPUT_GET, 'transaction', FILTER_SANITIZE_SPECIAL_CHARS );
 
 				if ( in_array( $transaction, array( 'debit', 'credit' ), true ) ) {
 					$msg = esc_html__( 'Amount is debited successfully.', 'wp-wallet-system' );

@@ -79,11 +79,11 @@ if ( ! class_exists( 'WKWC_Wallet_Install' ) ) {
 
 			if ( $verification_check !== $old_verification && $new_verification_check !== $new_verification ) {
 				$verification_sql = "CREATE TABLE IF NOT EXISTS $new_verification (
-								id int(250) NOT NULL AUTO_INCREMENT,
-								phone_number varchar(50) DEFAULT NULL,
-								verification_code int(11) DEFAULT NULL,
-								expiry int(250) NOT NULL,
-								UNIQUE KEY id (id)
+					id int(250) NOT NULL AUTO_INCREMENT,
+					phone_number varchar(50) DEFAULT NULL,
+					verification_code int(11) DEFAULT NULL,
+					expiry int(250) NOT NULL,
+					UNIQUE KEY id (id)
 				) $charset_collate;";
 
 				dbDelta( $verification_sql );
@@ -100,17 +100,17 @@ if ( ! class_exists( 'WKWC_Wallet_Install' ) ) {
 
 			if ( $transactions_check !== $old_transactions && $new_transactions_check !== $new_transactions ) {
 				$transactions_sql = "CREATE TABLE IF NOT EXISTS $new_transactions (
-								id bigint(20) NOT NULL AUTO_INCREMENT,
-								order_id varchar(250),
-								reference varchar(100) NOT NULL,
-								sender int(10) NOT NULL,
-								customer int(10) NOT NULL,
-								amount varchar(50) NOT NULL,
-								transaction_type varchar(10) NOT NULL,
-								transaction_date datetime NOT NULL,
-								transaction_status varchar(10) DEFAULT 'completed',
-								transaction_note varchar(250),
-							PRIMARY KEY (`id`)
+					id bigint(20) NOT NULL AUTO_INCREMENT,
+					order_id varchar(250),
+					reference varchar(100) NOT NULL,
+					sender int(10) NOT NULL,
+					customer int(10) NOT NULL,
+					amount varchar(50) NOT NULL,
+					transaction_type varchar(10) NOT NULL,
+					transaction_date datetime NOT NULL,
+					transaction_status varchar(25) DEFAULT 'completed',
+					transaction_note varchar(250),
+					PRIMARY KEY (`id`)
 				) $charset_collate;";
 
 				dbDelta( $transactions_sql );

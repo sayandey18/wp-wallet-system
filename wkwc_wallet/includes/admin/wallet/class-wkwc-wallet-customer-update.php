@@ -164,10 +164,14 @@ if ( ! class_exists( 'WKWC_Wallet_Customer_Update' ) ) {
 						} else {
 							$errmsg = wp_sprintf( /* translators: %s: Maximum amount. */ esc_html__( 'You Could not store more than %s', 'wp-wallet-system' ), $maximum_store_amount );
 						}
-					} elseif ( 'debit' === $wallet_action && $old_amount >= $wallet_amount ) {
-						$new_amount = $old_amount - $wallet_amount;
-						$reference  = __( 'Manual Wallet Debit', 'wp-wallet-system' );
-						$check_val  = 'updated';
+					} elseif ( 'debit' === $wallet_action ) {
+						if ( $old_amount >= $wallet_amount ) {
+							$new_amount = $old_amount - $wallet_amount;
+							$reference  = __( 'Manual Wallet Debit', 'wp-wallet-system' );
+							$check_val  = 'updated';
+						} else {
+							$errmsg = wp_sprintf( /* translators: %s: Maximum amount. */ esc_html__( 'Wallet has less amount than %s', 'wp-wallet-system' ), $wallet_amount );
+						}
 					} else {
 						$errmsg = __( 'Insufficient Amount.', 'wp-wallet-system' );
 					}
@@ -176,7 +180,7 @@ if ( ! class_exists( 'WKWC_Wallet_Customer_Update' ) ) {
 						$data = array(
 							'transaction_type'   => $wallet_action,
 							'amount'             => $wallet_amount,
-							'sender'             => get_current_user_ID(),
+							'sender'             => get_current_user_id(),
 							'customer'           => $wallet_customer,
 							'transaction_note'   => $wallet_note,
 							'transaction_status' => 'manual_transaction',
