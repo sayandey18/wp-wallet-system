@@ -121,7 +121,7 @@ class WKWP_Wallet_Cashback_Rules extends WP_List_Table {
 	 * @param array $item List items.
 	 */
 	public function column_cb( $item ) {
-		return sprintf( '<input type="checkbox" id="rule_%s"name="rule[]" value="%s" />', $item['id'], $item['id'] );
+		return sprintf( '<input type="checkbox" id="rule_%s" name="rule[]" value="%s" />', $item['id'], $item['id'] );
 	}
 
 	/**
@@ -132,10 +132,9 @@ class WKWP_Wallet_Cashback_Rules extends WP_List_Table {
 	public function get_columns() {
 		$columns = array(
 			'cb'              => '<input type="checkbox" />', // Render a checkbox instead of text.
-			'id'              => __( 'Id', 'wp-wallet-system' ),
+			'rule_name'       => __( 'Rule Name', 'wp-wallet-system' ),
 			'rule_price_from' => __( 'Price From', 'wp-wallet-system' ),
 			'rule_price_to'   => __( 'Price To', 'wp-wallet-system' ),
-			'rule_annually'   => __( 'Yearly Based', 'wp-wallet-system' ),
 			'rule_type'       => __( 'Type', 'wp-wallet-system' ),
 			'amount'          => __( 'Amount', 'wp-wallet-system' ),
 			'cashback_for'    => __( 'Cashback For', 'wp-wallet-system' ),
@@ -152,10 +151,9 @@ class WKWP_Wallet_Cashback_Rules extends WP_List_Table {
 	 */
 	public function get_sortable_columns() {
 		$sortable_columns = array(
-			'id'              => array( 'id', true ),
+			'rule_name'       => array( 'rule_name', true ),
 			'rule_price_from' => array( 'rule_price_from', true ),
 			'rule_price_to'   => array( 'rule_price_to', true ),
-			'rule_annually'   => array( 'rule_annually', true ),
 			'rule_type'       => array( 'rule_type', true ),
 			'amount'          => array( 'amount', true ),
 			'cashback_for'    => array( 'cashback_for', true ),
@@ -180,9 +178,9 @@ class WKWP_Wallet_Cashback_Rules extends WP_List_Table {
 		foreach ( $rules as $rule ) {
 			$data[] = array(
 				'id'              => $rule['id'],
+				'rule_name'       => $rule['rule_name'],
 				'rule_price_from' => $rule['rule_price_from'],
 				'rule_price_to'   => $rule['rule_price_to'],
-				'rule_annually'   => $rule['rule_annually'] ? 'Yes' : 'No',
 				'rule_type'       => ucfirst( $rule['rule_type'] ),
 				'amount'          => ( 'percent' === $rule['rule_type'] ) ? $rule['amount'] . '%' : wc_price( $rule['amount'] ),
 				'cashback_for'    => $rule['cashback_for'],
@@ -231,9 +229,9 @@ class WKWP_Wallet_Cashback_Rules extends WP_List_Table {
 	public function column_default( $item, $column_name ) {
 		switch ( $column_name ) {
 			case 'id':
+			case 'rule_name':
 			case 'rule_price_from':
 			case 'rule_price_to':
-			case 'rule_annually':
 			case 'rule_type':
 			case 'amount':
 			case 'cashback_for':
@@ -245,11 +243,11 @@ class WKWP_Wallet_Cashback_Rules extends WP_List_Table {
 	}
 
 	/**
-	 * Column ID.
+	 * Column Rule Name.
 	 *
 	 * @param array $item List items.
 	 */
-	public function column_id( $item ) {
+	public function column_rule_name( $item ) {
 		$edit_url = add_query_arg(
 			array(
 				'page'    => 'wkwp_wallet_cb_rules',
@@ -272,6 +270,6 @@ class WKWP_Wallet_Cashback_Rules extends WP_List_Table {
 			'trash' => sprintf( '<a href="%s">Delete</a>', $delete_url ),
 		);
 
-		return sprintf( '%1$s %2$s', $item['id'], $this->row_actions( $actions ) );
+		return sprintf( '%1$s %2$s', $item['rule_name'], $this->row_actions( $actions ) );
 	}
 }
