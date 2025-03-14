@@ -1,5 +1,5 @@
 === WooCommerce Wallet System ===
-Contributors: sayandey18
+Contributors: UpEarlyDesigns
 Tested up to: 6.7.2
 Stable tag: 3.6.0
 Requires PHP: 7.4
