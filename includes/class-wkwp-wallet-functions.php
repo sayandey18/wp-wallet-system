@@ -275,7 +275,8 @@ if ( ! class_exists( 'WKWP_Wallet_Functions' ) ) {
 				return false;
 			}
 
-			$order_total = (float) $wc_order->get_subtotal();
+			$order_total = (float) $wc_order->get_total(); // Applied on total order amount
+			// $order_total = (float) $wc_order->get_subtotal(); // Applied on subtotal order amount
 
 			$wallet            = get_page_by_path( 'wkwc_wallet', OBJECT, 'product' );
 			$wallet_product_id = empty( $wallet->ID ) ? 0 : intval( $wallet->ID );
@@ -296,24 +297,39 @@ if ( ! class_exists( 'WKWP_Wallet_Functions' ) ) {
 			$multi_cb       = get_option( '_wkwp_wallet_multi_cb', false );
 			$cb_preference  = get_option( '_wkwp_wallet_preferred_cb', false );
 
+			$annual_cb = wc_string_to_bool( 
+				get_option( '_wkwp_wallet_annual_purchased_cb', false )
+			);
+
+			$annual_purchase = 0.0;
+			if ( $annual_cb ) {
+				$annual_purchase = (float) get_user_meta( 
+					$customer_id, 'wkwp_customer_total_annual_purchase', true 
+				);
+			}
+
 			$log_data = array(
 				'order_id'          => $order_id,
 				'customer_id'       => $customer_id,
 				'wallet_in_order'   => $wallet_in_order,
 				'wallet_product_id' => $wallet_product_id,
 				'order_total'       => $order_total,
+				'annual_purchase'   => $annual_purchase,
 				'multi_cb'          => $multi_cb,
+				'annual_cb'         => $annual_cb,
 				'cb_preference'     => $cb_preference,
 			);
 
 			if ( ! $wallet_in_order && ( wc_string_to_bool( $multi_cb ) || 'cart' === $cb_preference ) ) {
 				$rules_helper = WKWP_Wallet_Cashback_Helper::get_instance();
 
+				$rule_price = $annual_cb ? $annual_purchase : $order_total;
+
 				$args = array(
 					'fields'       => 'rule_type, amount',
 					'cashback_for' => 'cart',
 					'rule_status'  => 'publish',
-					'rule_price'   => $order_total,
+					'rule_price'   => $rule_price,
 				);
 
 				$matched_rule = $rules_helper->get_rules( $args );
@@ -471,6 +487,13 @@ if ( ! class_exists( 'WKWP_Wallet_Functions' ) ) {
 						$tr_helper->create_transaction( $data );
 					}
 				}
+			}
+
+			if ( $annual_cb ) {
+				$new_annual_purchase = $annual_purchase + $order_total;
+				update_user_meta( $customer_id, 'wkwp_customer_total_annual_purchase', $new_annual_purchase );
+
+				$log_data['annual_purchase_after'] = $new_annual_purchase;
 			}
 
 			WKWP_Wallet::log( 'Order completed cachback: Log data: ' . print_r( $log_data, true ) );
