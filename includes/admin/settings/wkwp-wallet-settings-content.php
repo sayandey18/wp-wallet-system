@@ -13,6 +13,15 @@ defined( 'ABSPATH' ) || exit; // Exit if access directly.
 </tr>
 <tr>
 	<th scope="row" class="titledesc">
+		<label for="_wkwp_wallet_bonus_amount"><?php esc_html_e( 'Signup Bonus Amount', 'wp-wallet-system' ); ?></label>
+	</th>
+	<td class="forminp forminp-text">
+		<?php echo wc_help_tip( esc_html__( 'Enter the signup bonus amount to be awarded to new users', 'wp-wallet-system' ), true ); ?>
+		<input type="number" id="_wkwp_wallet_bonus_amount" name="_wkwp_wallet_bonus_amount" step="0.1" min="0" value="<?php echo esc_attr( get_option( '_wkwp_wallet_bonus_amount', 5.0 ) ); ?>" />
+	</td>
+</tr>
+<tr>
+	<th scope="row" class="titledesc">
 		<label for="_wkwp_wallet_multi_cb"><?php esc_html_e( 'Multiple Cashback Conditions', 'wp-wallet-system' ); ?></label>
 	</th>
 	<td class="forminp forminp-text">

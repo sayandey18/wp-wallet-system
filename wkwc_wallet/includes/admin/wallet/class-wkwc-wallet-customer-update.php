@@ -159,7 +159,7 @@ if ( ! class_exists( 'WKWC_Wallet_Customer_Update' ) ) {
 					if ( 'credit' === $wallet_action ) {
 						$new_amount = $old_amount + $wallet_amount;
 						if ( $new_amount <= $maximum_store_amount ) {
-							$reference = __( 'Manual Wallet Credit', 'wp-wallet-system' );
+							$reference = __( 'Tokens added to your account', 'wp-wallet-system' );
 							$check_val = 'updated';
 						} else {
 							$errmsg = wp_sprintf( /* translators: %s: Maximum amount. */ esc_html__( 'You Could not store more than %s', 'wp-wallet-system' ), $maximum_store_amount );

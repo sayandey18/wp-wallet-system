@@ -32,17 +32,26 @@ if ( ! class_exists( 'WK_Caching' ) ) {
 		 * Show caching settings.
 		 */
 		public static function wkwc_show_caching_settings() {
-			$posted_data = isset( $_POST ) ? wc_clean( $_POST ) : array(); //phpcs:ignore WordPress.Security.NonceVerification.Missing
+			// Verify if the form is submitted
+			if ( isset( $_POST['wk_caching_set_save'] ) ) {
+				// Verify nonce
+				if ( ! isset( $_POST['wkwc_caching_nonce'] ) || ! wp_verify_nonce( $_POST['wkwc_caching_nonce'], 'wkwc_caching_action' ) ) {
+					die( esc_html__( 'Security check failed!', 'wp-wallet-system' ) );
+				}
 
-			if ( ! empty( $posted_data['wk_caching_set_save'] ) ) {
-				$enabled = ! empty( $posted_data['wkwc_caching_enabled'] );
+				// Sanitize and update option
+				$enabled = isset( $_POST['wkwc_caching_enabled'] ) ? 1 : 0;
 				update_option( 'wkwc_caching_enabled', $enabled );
 			}
+
+
 			$enabled = get_option( 'wkwc_caching_enabled', true );
 			?>
+
 			<h1 class=wkwc_caching_title><?php esc_html_e( 'Plugin Core Caching', 'wp-wallet-system' ); ?></h1>
 			<div class="wrap">
 				<form method="post">
+					<?php wp_nonce_field( 'wkwc_caching_action', 'wkwc_caching_nonce' ); ?>
 					<table class="wkwc_caching_setting_table">
 						<tr>
 							<th scope="row"><?php esc_html_e( 'Enable', 'wp-wallet-system' ); ?></th>

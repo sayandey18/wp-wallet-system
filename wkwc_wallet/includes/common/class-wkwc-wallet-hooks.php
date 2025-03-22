@@ -34,6 +34,8 @@ if ( ! class_exists( 'WKWC_Wallet_Hooks' ) ) {
 
 			add_action( 'woocommerce_order_status_completed', array( $function_handler, 'wkwc_wallet_update_after_order_completed' ), 10, 1 );
 
+			add_action( 'user_register', array( $function_handler, 'wkwp_wallet_user_register_bonus' ), 10 );
+
 			// add_action( 'woocommerce_cart_updated', array( $function_handler, 'wkwc_wallet_update_on_cart_change' ), 20 );
 		}
 

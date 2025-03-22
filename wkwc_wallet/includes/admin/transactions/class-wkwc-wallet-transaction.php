@@ -373,7 +373,8 @@ if ( ! class_exists( 'WKWC_Wallet_Transaction' ) ) {
 			$wallet_setting = empty( $wallet_setting ) ? get_option( 'woocommerce_wkwc_wallet_settings', array() ) : $wallet_setting;
 
 			$user_id = get_current_user_ID();
-			$total   = WC()->cart->get_total( 'edit' );
+			// $total   = WC()->cart->get_total( 'edit' );
+			$total   = WC()->cart->get_subtotal( 'edit' );
 
 			$max_debit      = isset( $wallet_setting['max_debit'] ) ? floatval( $wallet_setting['max_debit'] ) : 0;
 			$max_debit_type = empty( $wallet_setting['max_debit_type'] ) ? 0 : intval( $wallet_setting['max_debit_type'] );

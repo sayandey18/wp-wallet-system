@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-03-14T08:05:44+00:00\n"
+"POT-Creation-Date: 2025-03-22T21:02:02+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.11.0\n"
 "X-Domain: wp-wallet-system\n"
@@ -22,7 +22,7 @@ msgstr ""
 #. Plugin URI of the plugin
 #. Author URI of the plugin
 #: wp-wallet-system.php
-msgid "https://upearlydesigns.com"
+msgid "https://woo.serverhome.biz"
 msgstr ""
 
 #. Description of the plugin
@@ -89,8 +89,8 @@ msgid "Cashback Type"
 msgstr ""
 
 #: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:125
-#: includes/class-wkwp-wallet-functions.php:96
-#: includes/class-wkwp-wallet-functions.php:210
+#: includes/class-wkwp-wallet-functions.php:120
+#: includes/class-wkwp-wallet-functions.php:234
 msgid "Fixed"
 msgstr ""
 
@@ -103,8 +103,8 @@ msgid "You can set cashback type either fixed or percentage based. Cashback will
 msgstr ""
 
 #: includes/admin/cashback/class-wkwp-wallet-cashback-rule.php:134
-#: includes/class-wkwp-wallet-functions.php:104
-#: includes/class-wkwp-wallet-functions.php:227
+#: includes/class-wkwp-wallet-functions.php:128
+#: includes/class-wkwp-wallet-functions.php:251
 msgid "Cashback Amount"
 msgstr ""
 
@@ -199,16 +199,16 @@ msgid "Price To"
 msgstr ""
 
 #: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:138
-#: includes/class-wkwp-wallet-functions.php:92
-#: includes/class-wkwp-wallet-functions.php:208
+#: includes/class-wkwp-wallet-functions.php:116
+#: includes/class-wkwp-wallet-functions.php:232
 #: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:98
 #: wkwc_wallet/templates/wkwc-wallet-front-listing.php:100
 msgid "Type"
 msgstr ""
 
 #: includes/admin/cashback/class-wkwp-wallet-cashback-rules.php:139
-#: includes/class-wkwp-wallet-functions.php:102
-#: includes/class-wkwp-wallet-functions.php:225
+#: includes/class-wkwp-wallet-functions.php:126
+#: includes/class-wkwp-wallet-functions.php:249
 #: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction-list.php:177
 #: wkwc_wallet/includes/admin/transactions/class-wkwc-wallet-transaction.php:76
 #: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:85
@@ -280,101 +280,117 @@ msgid "Cashback Settings"
 msgstr ""
 
 #: includes/admin/settings/wkwp-wallet-settings-content.php:16
-msgid "Multiple Cashback Conditions"
+msgid "Signup Bonus Amount"
 msgstr ""
 
 #: includes/admin/settings/wkwp-wallet-settings-content.php:19
-msgid "If checked, multipce cashback conditions can be applied."
+msgid "Enter the signup bonus amount to be awarded to new users"
 msgstr ""
 
 #: includes/admin/settings/wkwp-wallet-settings-content.php:25
-msgid "Annual Purchase Based Cashback Conditions"
+msgid "Multiple Cashback Conditions"
 msgstr ""
 
 #: includes/admin/settings/wkwp-wallet-settings-content.php:28
-msgid "If checked, annual purchase based cashback conditions can be applied."
+msgid "If checked, multipce cashback conditions can be applied."
 msgstr ""
 
 #: includes/admin/settings/wkwp-wallet-settings-content.php:34
-msgid "Preference in Multiple Cashback"
+msgid "Annual Purchase Based Cashback Conditions"
 msgstr ""
 
 #: includes/admin/settings/wkwp-wallet-settings-content.php:37
+msgid "If checked, annual purchase based cashback conditions can be applied."
+msgstr ""
+
+#: includes/admin/settings/wkwp-wallet-settings-content.php:43
+msgid "Preference in Multiple Cashback"
+msgstr ""
+
+#: includes/admin/settings/wkwp-wallet-settings-content.php:46
 msgid "Select preference for multiple cashback conditions."
 msgstr ""
 
-#: includes/admin/settings/wkwp-wallet-settings-content.php:39
+#: includes/admin/settings/wkwp-wallet-settings-content.php:48
 msgid "Product"
 msgstr ""
 
-#: includes/admin/settings/wkwp-wallet-settings-content.php:40
+#: includes/admin/settings/wkwp-wallet-settings-content.php:49
 msgid "Cart"
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:65
-msgid "Wallet Cashback"
+#: includes/class-wkwp-wallet-functions.php:46
+msgid "Product reward rate"
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:88
-#: includes/class-wkwp-wallet-functions.php:196
-msgid "Quantity"
+#: includes/class-wkwp-wallet-functions.php:49
+msgid "Enter product reward rate which multiply with quantity"
 msgstr ""
 
 #: includes/class-wkwp-wallet-functions.php:89
+msgid "Wallet Cashback"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:112
+#: includes/class-wkwp-wallet-functions.php:220
+msgid "Quantity"
+msgstr ""
+
+#: includes/class-wkwp-wallet-functions.php:113
 msgid "Product Quantity"
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:90
-#: includes/class-wkwp-wallet-functions.php:198
+#: includes/class-wkwp-wallet-functions.php:114
+#: includes/class-wkwp-wallet-functions.php:222
 msgid "Minimum Cart Quantity"
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:97
-#: includes/class-wkwp-wallet-functions.php:211
+#: includes/class-wkwp-wallet-functions.php:121
+#: includes/class-wkwp-wallet-functions.php:235
 msgid "Percentage"
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:100
-#: includes/class-wkwp-wallet-functions.php:214
+#: includes/class-wkwp-wallet-functions.php:124
+#: includes/class-wkwp-wallet-functions.php:238
 msgid "Cashback Based On Type"
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:146
+#: includes/class-wkwp-wallet-functions.php:170
 msgid "Enter a valid numeric cashback amount greater than 0."
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:150
+#: includes/class-wkwp-wallet-functions.php:174
 msgid "Cashback cannot be greater than 100%"
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:157
+#: includes/class-wkwp-wallet-functions.php:181
 msgid "Cashback Amount cannot be greater than product price."
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:187
+#: includes/class-wkwp-wallet-functions.php:211
 msgid "Wallet Cashback:"
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:357
-msgid "Cart cashback received on purchase."
+#: includes/class-wkwp-wallet-functions.php:437
+msgid "Tokens earned on your purchase"
 msgstr ""
 
 #. translators: %s: Order number.
-#: includes/class-wkwp-wallet-functions.php:358
-#: includes/class-wkwp-wallet-functions.php:472
+#: includes/class-wkwp-wallet-functions.php:438
+#: includes/class-wkwp-wallet-functions.php:552
 msgid "Order no: %s"
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:416
+#: includes/class-wkwp-wallet-functions.php:496
 msgid "Product cashback received on purchase."
 msgstr ""
 
 #. translators: %s: Order number, %s: Product title.
-#: includes/class-wkwp-wallet-functions.php:417
+#: includes/class-wkwp-wallet-functions.php:497
 msgid "Order no: %1$s, Product name: %2$s"
 msgstr ""
 
-#: includes/class-wkwp-wallet-functions.php:471
+#: includes/class-wkwp-wallet-functions.php:551
 msgid "Recharge cashback received."
 msgstr ""
 
@@ -393,7 +409,7 @@ msgstr ""
 #. translators: %s current user id
 #: includes/class-wkwp-wallet.php:161
 #: wkwc_wallet/includes/class-wkwc-wallet.php:200
-#: wk_caching/includes/class-wk-caching.php:178
+#: wk_caching/includes/class-wk-caching.php:187
 msgid "User in action: %s: "
 msgstr ""
 
@@ -709,7 +725,7 @@ msgid "Some fields are empty."
 msgstr ""
 
 #: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-customer-update.php:162
-msgid "Manual Wallet Credit"
+msgid "Tokens added to your account"
 msgstr ""
 
 #. translators: %s: Maximum amount.
@@ -747,7 +763,6 @@ msgid "Amount is credited successfully."
 msgstr ""
 
 #: wkwc_wallet/includes/admin/wallet/class-wkwc-wallet-product.php:51
-#: wkwc_wallet/includes/front/class-wkwc-wallet-front-filter-functions.php:58
 #: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:32
 msgid "Wallet"
 msgstr ""
@@ -831,14 +846,14 @@ msgid "Anonymous User"
 msgstr ""
 
 #: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:67
-#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:314
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:315
 #: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:276
 msgid "Order No."
 msgstr ""
 
 #: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:68
-#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:321
-#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:336
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:322
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:337
 msgid "Wallet Transaction"
 msgstr ""
 
@@ -851,34 +866,29 @@ msgstr ""
 msgid "Pay via Wallet"
 msgstr ""
 
-#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:105
-#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:94
-msgid "Pay with amount in your wallet."
-msgstr ""
-
-#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:150
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:151
 msgid "Enter the OTP."
 msgstr ""
 
-#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:153
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:154
 msgid "Verify"
 msgstr ""
 
-#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:155
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:156
 #: wkwc_wallet/includes/front/class-wkwc-wallet-front-ajax-functions.php:86
 msgid "Invalid OTP"
 msgstr ""
 
-#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:186
-#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:332
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:187
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:333
 msgid "Payment via Wallet"
 msgstr ""
 
-#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:323
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:324
 msgid "Wallet full checkout"
 msgstr ""
 
-#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:338
+#: wkwc_wallet/includes/common/class-wkwc-wallet-functions.php:339
 msgid "Wallet partial checkout"
 msgstr ""
 
@@ -1025,8 +1035,12 @@ msgstr ""
 msgid "Phone number has been successfully updated."
 msgstr ""
 
+#: wkwc_wallet/includes/front/class-wkwc-wallet-front-filter-functions.php:58
+msgid "Universal Food Tokens"
+msgstr ""
+
 #: wkwc_wallet/includes/front/class-wkwc-wallet-front-filter-functions.php:87
-msgid "My Wallet"
+msgid "UFC Balance"
 msgstr ""
 
 #: wkwc_wallet/includes/front/class-wkwc-wallet-front-functions.php:110
@@ -1100,6 +1114,10 @@ msgstr ""
 
 #: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:93
 msgid "Payment method description that the customer will see during checkout."
+msgstr ""
+
+#: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:94
+msgid "Pay with amount in your wallet."
 msgstr ""
 
 #: wkwc_wallet/includes/gateway/class-wc-gateway-wkwc-wallet.php:98
@@ -1275,36 +1293,40 @@ msgstr ""
 msgid "Reference: "
 msgstr ""
 
-#: wk_caching/includes/class-wk-caching.php:43
+#: wk_caching/includes/class-wk-caching.php:39
+msgid "Security check failed!"
+msgstr ""
+
+#: wk_caching/includes/class-wk-caching.php:51
 msgid "Plugin Core Caching"
 msgstr ""
 
-#: wk_caching/includes/class-wk-caching.php:48
+#: wk_caching/includes/class-wk-caching.php:57
 msgid "Enable"
 msgstr ""
 
-#: wk_caching/includes/class-wk-caching.php:53
+#: wk_caching/includes/class-wk-caching.php:62
 msgid "Save"
 msgstr ""
 
-#: wk_caching/includes/class-wk-caching.php:73
+#: wk_caching/includes/class-wk-caching.php:82
 msgid "Clear all"
 msgstr ""
 
 #. Translators: %s: Saved cache keys count.
-#: wk_caching/includes/class-wk-caching.php:74
+#: wk_caching/includes/class-wk-caching.php:83
 msgid " Saved keys count: %s"
 msgstr ""
 
 #. Translators: %s: Saved cache keys count.
-#: wk_caching/includes/class-wk-caching.php:75
+#: wk_caching/includes/class-wk-caching.php:84
 msgid "Show Keys"
 msgstr ""
 
-#: wk_caching/includes/class-wk-caching.php:76
+#: wk_caching/includes/class-wk-caching.php:85
 msgid "Show Data"
 msgstr ""
 
-#: wk_caching/includes/class-wk-caching.php:144
+#: wk_caching/includes/class-wk-caching.php:153
 msgid "Please run the command \"composer install\" at following path to install PHP Fast Cache library."
 msgstr ""

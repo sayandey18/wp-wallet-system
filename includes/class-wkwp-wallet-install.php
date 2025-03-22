@@ -60,6 +60,12 @@ if ( ! class_exists( 'WKWP_Wallet_Install' ) ) {
 			register_setting( 'wkwc-wallet-settings-group', '_wkwp_wallet_multi_cb' );
 			register_setting( 'wkwc-wallet-settings-group', '_wkwp_wallet_preferred_cb' );
 			register_setting( 'wkwc-wallet-settings-group', '_wkwp_wallet_annual_purchased_cb' );
+			register_setting( 'wkwc-wallet-settings-group', '_wkwp_wallet_bonus_amount', 
+				[
+					'default' => 5.0,
+					'sanitize_callback' => 'floatval'
+				]
+			);
 
 			$get_db_version = get_option( '_wkwp_wallet_db_version', '0.0.0' );
 
@@ -77,7 +83,6 @@ if ( ! class_exists( 'WKWP_Wallet_Install' ) ) {
 				if ( $cashback_check !== $old_cashback && $new_cashback_check !== $new_cashback ) {
 					$cashback_sql = "CREATE TABLE IF NOT EXISTS $new_cashback (
 						id bigint(20) NOT NULL AUTO_INCREMENT,
-						rule_name varchar(25) NOT NULL,
 						rule_type varchar(10) NOT NULL,
 						rule_price_from float NOT NULL,
 						rule_price_to float NOT NULL,

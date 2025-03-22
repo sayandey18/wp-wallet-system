@@ -55,7 +55,7 @@ if ( ! class_exists( 'WKWC_Wallet_Front_Filter_Functions' ) ) {
 
 			if ( is_array( $wp->query_vars ) && in_the_loop() && ! is_admin() && is_main_query() && is_account_page() ) {
 				if ( array_key_exists( 'wkwc_wallet', $wp->query_vars ) ) {
-					$title = __( 'Wallet', 'wp-wallet-system' );
+					$title = __( 'Universal Food Tokens', 'wp-wallet-system' );
 				}
 
 				remove_filter( 'the_title', array( $this, 'wkwc_wallet_update_title' ) );
@@ -84,7 +84,7 @@ if ( ! class_exists( 'WKWC_Wallet_Front_Filter_Functions' ) ) {
 
 			if ( ! empty( $wallet_setting['enabled'] ) && 'yes' === $wallet_setting['enabled'] ) {
 				// Insert your custom endpoint 'Wallet'.
-				$items['wkwc_wallet'] = __( 'My Wallet', 'wp-wallet-system' );
+				$items['wkwc_wallet'] = __( 'UFC Balance', 'wp-wallet-system' );
 			}
 
 			if ( ! empty( $logout ) ) {

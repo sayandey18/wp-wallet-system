@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:          WooCommerce Wallet System
- * Plugin URI:           https://upearlydesigns.com
+ * Plugin URI:           https://woo.serverhome.biz
  * Description:          WooCommerce Wallet System Plugin helps in integrating wallet payment method.
  * Version:              3.6.0
  * Requires at least:    5.2
  * Requires PHP:         7.4
  * Author:               UpEarlyDesigns
- * Author URI:           https://upearlydesigns.com
+ * Author URI:           https://woo.serverhome.biz
  * License:              GPL v2 or later
  * License URI:          http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:          wp-wallet-system

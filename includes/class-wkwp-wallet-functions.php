@@ -39,6 +39,30 @@ if ( ! class_exists( 'WKWP_Wallet_Functions' ) ) {
 			return static::$instance;
 		}
 
+		public function wkwp_wallet_add_product_reward_rate() {
+			woocommerce_wp_text_input( 
+				array(
+					'id'          => '_wkwc_product_reward_rate',
+					'label'       => __('Product reward rate', 'wp-wallet-system'),
+					'placeholder' => '0',
+					'desc_tip'    => true,
+					'description' => __('Enter product reward rate which multiply with quantity', 'wp-wallet-system'),
+					'type'        => 'number',
+					'value'       => get_post_meta( get_the_ID(), '_wkwc_product_reward_rate', true ) ? get_post_meta( get_the_ID(), '_wkwc_product_reward_rate', true ) : '1',
+					'custom_attributes' => array(
+						'step' => 'any',
+						'min'  => '1'
+					)
+				)
+			);
+		}
+
+		public function wkwp_wallet_save_product_reward_rate( $product_id ) {
+			$reward_rate = isset( $_POST['_wkwc_product_reward_rate'] ) ? sanitize_text_field( $_POST['_wkwc_product_reward_rate'] ) : 1;
+			update_post_meta( $product_id, '_wkwc_product_reward_rate', $reward_rate );
+		}
+		
+
 		/**
 		 * Add product meta box for non-variable products.
 		 *
@@ -183,54 +207,54 @@ if ( ! class_exists( 'WKWP_Wallet_Functions' ) ) {
 			if ( $variation_id > 0 ) {
 				$variation_obj = wc_get_product( $variation_id );
 				?>
-		<div class="wkwc-wallet-front-container" id="show_if_variable_product">
-			<strong><?php esc_html_e( 'Wallet Cashback:', 'wp-wallet-system' ); ?> </strong>
-			<div class="wc-wallet-product-variation-metabox-wrapper">
-				<?php
-				woocommerce_wp_text_input(
-					array(
-						'id'            => 'cashback_min_quantity_restriction[ ' . $loop . ' ]',
-						'name'          => 'cashback_min_quantity_restriction[' . $loop . ']',
-						'wrapper_class' => 'form-row',
-						'type'          => 'number',
-						'label'         => __( 'Quantity', 'wp-wallet-system' ),
-						'desc_tip'      => 'true',
-						'description'   => __( 'Minimum Cart Quantity', 'wp-wallet-system' ),
-						'value'         => $variation_obj->get_meta( '_cashback_min_quantity_restriction', true ),
-					)
-				);
+				<div class="wkwc-wallet-front-container" id="show_if_variable_product">
+					<strong><?php esc_html_e( 'Wallet Cashback:', 'wp-wallet-system' ); ?> </strong>
+					<div class="wc-wallet-product-variation-metabox-wrapper">
+						<?php
+						woocommerce_wp_text_input(
+							array(
+								'id'            => 'cashback_min_quantity_restriction[ ' . $loop . ' ]',
+								'name'          => 'cashback_min_quantity_restriction[' . $loop . ']',
+								'wrapper_class' => 'form-row',
+								'type'          => 'number',
+								'label'         => __( 'Quantity', 'wp-wallet-system' ),
+								'desc_tip'      => 'true',
+								'description'   => __( 'Minimum Cart Quantity', 'wp-wallet-system' ),
+								'value'         => $variation_obj->get_meta( '_cashback_min_quantity_restriction', true ),
+							)
+						);
 
-				woocommerce_wp_select(
-					array(
-						'id'            => "product-meta-cashback-type{$loop}",
-						'name'          => "cashback_type_restriction[{$loop}]",
-						'value'         => $variation_obj->get_meta( '_cashback_type_restriction', true ),
-						'label'         => __( 'Type', 'wp-wallet-system' ),
-						'options'       => array(
-							'fixed'      => __( 'Fixed', 'wp-wallet-system' ),
-							'percentage' => __( 'Percentage', 'wp-wallet-system' ),
-						),
-						'desc_tip'      => true,
-						'description'   => __( 'Cashback Based On Type', 'wp-wallet-system' ),
-						'wrapper_class' => 'form-row',
-					)
-				);
+						woocommerce_wp_select(
+							array(
+								'id'            => "product-meta-cashback-type{$loop}",
+								'name'          => "cashback_type_restriction[{$loop}]",
+								'value'         => $variation_obj->get_meta( '_cashback_type_restriction', true ),
+								'label'         => __( 'Type', 'wp-wallet-system' ),
+								'options'       => array(
+									'fixed'      => __( 'Fixed', 'wp-wallet-system' ),
+									'percentage' => __( 'Percentage', 'wp-wallet-system' ),
+								),
+								'desc_tip'      => true,
+								'description'   => __( 'Cashback Based On Type', 'wp-wallet-system' ),
+								'wrapper_class' => 'form-row',
+							)
+						);
 
-				woocommerce_wp_text_input(
-					array(
-						'id'            => 'cashback_amount_awarded[' . $loop . ']',
-						'name'          => 'cashback_amount_awarded[' . $loop . ']',
-						'wrapper_class' => 'form-row',
-						'type'          => 'number',
-						'label'         => __( 'Amount', 'wp-wallet-system' ),
-						'desc_tip'      => 'true',
-						'description'   => __( 'Cashback Amount', 'wp-wallet-system' ),
-						'value'         => $variation_obj->get_meta( '_cashback_amount_awarded', true ),
-					)
-				);
-				?>
-			</div>
-		</div>
+						woocommerce_wp_text_input(
+							array(
+								'id'            => 'cashback_amount_awarded[' . $loop . ']',
+								'name'          => 'cashback_amount_awarded[' . $loop . ']',
+								'wrapper_class' => 'form-row',
+								'type'          => 'number',
+								'label'         => __( 'Amount', 'wp-wallet-system' ),
+								'desc_tip'      => 'true',
+								'description'   => __( 'Cashback Amount', 'wp-wallet-system' ),
+								'value'         => $variation_obj->get_meta( '_cashback_amount_awarded', true ),
+							)
+						);
+						?>
+					</div>
+				</div>
 				<?php
 			}
 		}
@@ -259,6 +283,60 @@ if ( ! class_exists( 'WKWP_Wallet_Functions' ) ) {
 		}
 
 		/**
+		 * Generate product cart cashback based on product custom meta redwards rate.
+		 * 
+		 * @param int $order_id Order id.
+		 * @param int $cashback Cashback percent.
+		 * 
+		 * @return float
+		 */
+		public function wkwp_wallet_calculate_cashback( $order_id, $cashback ) {
+			// Get the order object
+			$order = wc_get_order( $order_id );
+			
+			if (!$order) {
+				return array( 'error' => 'Order not found' );
+			}
+		
+			$order_subtotal = $order->get_subtotal();
+			$order_total = $order->get_total();
+			
+			$order_ratio = $order_total / $order_subtotal;
+		
+			$cashback_components = [];
+			foreach ( $order->get_items() as $item_id => $item ) {
+				$product_id = $item->get_product_id();
+				$product = wc_get_product( $product_id );
+				
+				if ( !$product ) {
+					continue;
+				}
+				
+				// Get reward rate meta
+				$reward_rate = get_post_meta( $product_id, '_wkwc_product_reward_rate', true );
+				$reward_rate = !empty( $reward_rate ) ? $reward_rate : 1;
+				
+				// Get quantity
+				$quantity = $item->get_quantity();
+				
+				// Get product prices
+				$product_subtotal = $item->get_subtotal();
+				$unit_price = $product_subtotal / $quantity;
+				$reward_percent = $cashback / 100;
+				
+				// Calculate cashback component for this product
+				$cashback_component = $quantity * $reward_rate * $reward_percent * $unit_price;
+				$cashback_components[] = $cashback_component;
+			}
+		
+			// Calculate total cashback
+			$sum_components = array_sum( $cashback_components );
+			$total_cashback = $order_ratio * $sum_components;
+		
+			return $total_cashback;
+		}
+
+		/**
 		 * Process wallet after order completed.
 		 *
 		 * @param int $order_id Order id.
@@ -275,8 +353,8 @@ if ( ! class_exists( 'WKWP_Wallet_Functions' ) ) {
 				return false;
 			}
 
-			$order_total = (float) $wc_order->get_total(); // Applied on total order amount
-			// $order_total = (float) $wc_order->get_subtotal(); // Applied on subtotal order amount
+			// $order_total = (float) $wc_order->get_total(); // Applied on total order amount
+			$order_total = (float) $wc_order->get_subtotal(); // Applied on subtotal order amount
 
 			$wallet            = get_page_by_path( 'wkwc_wallet', OBJECT, 'product' );
 			$wallet_product_id = empty( $wallet->ID ) ? 0 : intval( $wallet->ID );
@@ -344,7 +422,9 @@ if ( ! class_exists( 'WKWP_Wallet_Functions' ) ) {
 					$log_data['cart_cashback'] = $cashback_amount;
 
 					if ( ! empty( $rule_type ) && ! empty( $cashback_amount ) && 'percent' === $rule_type ) {
-						$cashback_amount                   = ( $cashback_amount * $order_total ) / 100;
+						// $cashback_amount = ( $cashback_amount * $order_total ) / 100;
+						$cashback_amount = $this->wkwp_wallet_calculate_cashback( $order_id, $cashback_amount );
+
 						$log_data['cart_cashback_percent'] = $cashback_amount;
 					}
 
@@ -354,7 +434,7 @@ if ( ! class_exists( 'WKWP_Wallet_Functions' ) ) {
 
 						$log_data['total_cashback_cart'] = $total_cashback;
 
-						$reference   = __( 'Cart cashback received on purchase.', 'wp-wallet-system' );
+						$reference   = __( 'Tokens earned on your purchase', 'wp-wallet-system' );
 						$wallet_note = wp_sprintf( /* translators: %s: Order number. */ __( 'Order no: %s', 'wp-wallet-system' ), $order_id );
 
 						$tr_helper = WKWC_Wallet_Transactions_Helper::get_instance();

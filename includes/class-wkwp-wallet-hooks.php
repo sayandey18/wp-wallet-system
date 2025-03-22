@@ -34,6 +34,9 @@ if ( ! class_exists( 'WKWP_Wallet_Hooks' ) ) {
 			add_action( 'woocommerce_product_after_variable_attributes', array( $function_handler, 'wkwp_wallet_variation_product_metabox' ), 10, 3 );
 			add_action( 'woocommerce_save_product_variation', array( $function_handler, 'wkwp_wallet_save_variation_product_metabox' ), 10, 2 );
 
+			add_action( 'woocommerce_product_options_advanced', array( $function_handler, 'wkwp_wallet_add_product_reward_rate' ) );
+			add_action( 'woocommerce_process_product_meta', array( $function_handler, 'wkwp_wallet_save_product_reward_rate' ) );
+
 			add_action( 'woocommerce_order_status_completed', array( $function_handler, 'wkwp_wallet_after_order_completed' ), 10, 1 );
 		}
 

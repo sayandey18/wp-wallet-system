@@ -102,7 +102,7 @@ if ( ! class_exists( 'WKWC_Wallet_Functions' ) ) {
 				$virtual_allowed        = false;
 				$max_debit              = 0;
 				$gateway_title          = __( 'Pay via Wallet', 'wp-wallet-system' );
-				$gateway_desc           = __( 'Pay with amount in your wallet.', 'wp-wallet-system' );
+				$gateway_desc           = __( '', 'wp-wallet-system' );
 
 				foreach ( $gateways as $id => $gateway ) {
 					if ( 'wkwc_wallet' === $id && 'yes' === $gateway->enabled ) {
@@ -134,13 +134,14 @@ if ( ! class_exists( 'WKWC_Wallet_Functions' ) ) {
 						array(
 							'type'  => 'checkbox',
 							'id'    => 'wkwc_wallet-checkout-payment',
-							'label' => $gateway_title . ' <span class="wallet-money-style-small">' . wp_kses_post( wc_price( $wallet_money ) ) . '</span>',
+							'label' => $gateway_title . ' <span class="wallet-money-style-small">' . wp_kses_post( wc_price( $wallet_money ) ) . '</span>.',
 						),
 						! empty( $session_value )
 					);
 					echo '<img class="wp-spin wkwc_wallet-spin-loader" style="display: none;" src="' . esc_url( admin_url( '/images/spinner.gif' ) ) . '">';
 					echo '</div>';
 					echo '<p>' . esc_html( $gateway_desc ) . '</p>';
+					do_action('wkwc_after_wallet_checkbox');
 					echo '<div style="display:none;" class="wkwc_wallet-otp-wrap">';
 
 					woocommerce_form_field(
@@ -347,6 +348,64 @@ if ( ! class_exists( 'WKWC_Wallet_Functions' ) ) {
 			if ( ! empty( $transaction_data['transaction_note'] ) ) {
 				$tr_helper->create_transaction( $transaction_data );
 			}
+		}
+
+		/**
+		 * Adds a signup bonus to the user's wallet upon registration.
+		 *
+		 * @param int $user_id The ID of the newly registered user.
+		 * @return bool True on success, false on failure.
+		 */
+		public function wkwp_wallet_user_register_bonus( $user_id ) {
+			global $wpdb;
+		
+			// Get the signup bonus amount from settings (default: 5.0)
+			$bonus_amount = floatval( get_option( '_wkwp_wallet_bonus_amount', 5.0 ) );
+
+			// Dynamically get an admin ID (fallback to 1 if no admin found)
+			$admin_user = get_users(
+				[
+					'role'    => 'administrator',
+					'number'  => 1,
+					'orderby' => 'ID',
+					'order'   => 'ASC',
+					'fields'  => ['ID'],
+				]
+			);
+		
+			$admin_id = !empty( $admin_user ) ? $admin_user[0]->ID : 1;
+		
+			// Update the user's wallet balance and proceed only if successful
+			if ( update_user_meta( $user_id, 'wkwc_wallet_amount', $bonus_amount ) ) {
+		
+				// Prepare transaction data
+				$transaction_data = [
+					'order_id'           => '', // No order ID for a signup bonus
+					'reference'          => 'User sign-up bonus',
+					'sender'             => $admin_id,
+					'customer'           => $user_id,
+					'amount'             => $bonus_amount,
+					'transaction_type'   => 'credit',
+					'transaction_date'   => current_time('mysql'),
+					'transaction_status' => 'completed',
+					'transaction_note'   => 'Signup bonus credited to wallet',
+				];
+		
+				// Insert transaction into the wallet transactions table
+				$table_name = $wpdb->prefix . 'wkwc_wallet_transactions';
+				$inserted   = $wpdb->insert(
+					$table_name,
+					$transaction_data,
+					[
+						'%s', '%s', '%d', '%d',
+						'%f', '%s', '%s', '%s', '%s',
+					]
+				);
+		
+				return (bool) $inserted;
+			}
+		
+			return false;
 		}
 
 		/**
