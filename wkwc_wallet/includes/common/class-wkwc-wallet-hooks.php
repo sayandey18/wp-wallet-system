@@ -24,6 +24,9 @@ if ( ! class_exists( 'WKWC_Wallet_Hooks' ) ) {
 		 */
 		public function __construct() {
 			$function_handler = WKWC_Wallet_Functions::get_instance();
+
+			add_filter( 'cron_schedules', array( $function_handler, 'wkwc_register_yearly_schedule' ) );
+
 			add_action( 'woocommerce_review_order_before_submit', array( $function_handler, 'wkwc_wallet_wallet_payment' ), 20 );
 
 			add_action( 'woocommerce_cart_calculate_fees', array( $function_handler, 'wkwc_wallet_add_cart_fee' ), 999 );
@@ -36,8 +39,17 @@ if ( ! class_exists( 'WKWC_Wallet_Hooks' ) ) {
 
 			add_action( 'user_register', array( $function_handler, 'wkwp_wallet_user_register_bonus' ), 10 );
 
-			// add_action( 'woocommerce_cart_updated', array( $function_handler, 'wkwc_wallet_update_on_cart_change' ), 20 );
-		}
+			add_action( 'woocommerce_after_cart_item_quantity_update', array( $function_handler, 'wkwc_wallet_update_on_cart_change' ), 20 );
+			
+			add_action( 'woocommerce_cart_item_removed', array( $function_handler, 'wkwc_wallet_update_on_cart_change' ), 20 );
+			
+			add_action( 'woocommerce_add_to_cart', array( $function_handler, 'wkwc_wallet_update_on_cart_change' ), 20 );
+
+			add_action( 'init', array( $function_handler, 'wkwc_schedule_reset_annual_purchase' ) );
+
+			add_action( 'wkwc_reset_annual_purchase_hook', array( $function_handler, 'wkwc_reset_annual_purchase' ) );
+	
+		}	
 
 		/**
 		 * Ensures only one instance of this class is loaded or can be loaded.

@@ -377,6 +377,9 @@ if ( ! class_exists( 'WKWC_Wallet_Functions' ) ) {
 		
 			// Update the user's wallet balance and proceed only if successful
 			if ( update_user_meta( $user_id, 'wkwc_wallet_amount', $bonus_amount ) ) {
+
+				// Update the user's total annual purchase amount
+				update_user_meta( $user_id, 'wkwp_customer_total_annual_purchase', '1.00' );
 		
 				// Prepare transaction data
 				$transaction_data = [
@@ -413,11 +416,49 @@ if ( ! class_exists( 'WKWC_Wallet_Functions' ) ) {
 		 * 
 		 * @hooked 'woocommerce_cart_updated' Action hook.
 		 */
-		// public function wkwc_wallet_update_on_cart_change() {
-		// 	if ( ! empty( WC()->session->get( 'wkwc_wallet_allowed_wallet_amount' ) ) ) {
-		// 		WC()->session->__unset( 'wkwc_wallet_allowed_wallet_amount' );
-		// 		WC()->session->__unset( 'wkwc_wallet_cart_price' );
-		// 	}
-		// }
+		public function wkwc_wallet_update_on_cart_change() {
+			if ( ! empty( WC()->session->get( 'wkwc_wallet_allowed_wallet_amount' ) ) ) {
+				WC()->session->__unset( 'wkwc_wallet_allowed_wallet_amount' );
+				WC()->session->__unset( 'wkwc_wallet_cart_price' );
+			}
+		}
+
+		/**
+		 * Register the yearly schedule for WordPress Cron
+		 */
+		public function wkwc_register_yearly_schedule( $schedules ) {
+			$schedules['yearly'] = array(
+				'interval' => 31536000, // 365 days in seconds
+				'display' => __( 'Once a Year', 'wp-wallet-system' )
+			);
+
+			return $schedules;
+		}
+
+		/**
+		 * Schedule a yearly event to reset user meta on January 1st.
+		 */
+		public function wkwc_schedule_reset_annual_purchase() {
+			if ( !wp_next_scheduled( 'wkwc_reset_annual_purchase_hook' ) ) {
+				// Schedule the event on next January 1st at midnight
+				wp_schedule_event( strtotime( '1 January next year' ), 'yearly', 'wkwc_reset_annual_purchase_hook' );
+				// wp_schedule_event( time(), 'hourly', 'wkwc_reset_annual_purchase_hook' );
+			}
+		}
+
+		/**
+		 * Resets the 'wkwp_customer_total_annual_purchase' meta value for all users.
+		 *
+		 * @return void
+		 */
+		public function wkwc_reset_annual_purchase() {
+			// Get all users in the WordPress database
+			$users = get_users();
+	
+			// Loop through each user and reset their meta value
+			foreach ( $users as $user ) {
+				update_user_meta( $user->ID, 'wkwp_customer_total_annual_purchase', '1.00' );
+			}
+		}
 	}
 }
