@@ -379,7 +379,7 @@ if ( ! class_exists( 'WKWP_Wallet_Functions' ) ) {
 				get_option( '_wkwp_wallet_annual_purchased_cb', false )
 			);
 
-			$annual_purchase = 0.0;
+			$annual_purchase = 1.00; // As plugin minimum purchase is staring from 1
 			if ( $annual_cb ) {
 				$annual_purchase = (float) get_user_meta( 
 					$customer_id, 'wkwp_customer_total_annual_purchase', true 
