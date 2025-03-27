@@ -83,6 +83,7 @@ if ( ! class_exists( 'WKWP_Wallet_Install' ) ) {
 				if ( $cashback_check !== $old_cashback && $new_cashback_check !== $new_cashback ) {
 					$cashback_sql = "CREATE TABLE IF NOT EXISTS $new_cashback (
 						id bigint(20) NOT NULL AUTO_INCREMENT,
+						rule_name varchar(50) NOT NULL,
 						rule_type varchar(10) NOT NULL,
 						rule_price_from float NOT NULL,
 						rule_price_to float NOT NULL,
